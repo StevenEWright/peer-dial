@@ -44,7 +44,9 @@ var apps = {
            "ex": "urn:example:org:2014"
         }*/
         launch: function (launchData) {
-            opn("http://www.youtube.com/tv?additionalDataUrl=http://localhost:3000/apps/YouTube/additionalData&"+launchData);
+            // google-chrome
+            var additionalDataURL = "&additionalDataUrl=" + require('querystring').escape("http://localhost:3000/additionalData?app=YouTube");
+            opn("http://www.youtube.com/tv?" + launchData + additionalDataURL); // --allow-running-insecure-content
         }
 	}
 };
