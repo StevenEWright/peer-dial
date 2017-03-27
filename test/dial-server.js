@@ -44,7 +44,7 @@ var apps = {
            "ex": "urn:example:org:2014"
         }*/
         launch: function (launchData) {
-            opn("http://www.youtube.com/tv?"+launchData);
+            opn("http://www.youtube.com/tv?additionalDataUrl=http://localhost:3000/apps/YouTube/additionalData&"+launchData);
         }
 	}
 };
